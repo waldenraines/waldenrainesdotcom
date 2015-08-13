@@ -22,30 +22,27 @@
         <div class="container">
           <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" toggle="collapse" target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="/">Walden Raines</a>
+            <a class="navbar-brand" ui-sref="home">Walden Raines</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
             <div class="navbar-right">
               <ul class="nav navbar-nav">
-                <li data-ui-sref-active="active">
-                  <a href="" data-ui-sref="home">Home</a>
+                <li ui-sref-active="active">
+                  <a href="" ui-sref="resume">Resume</a>
                 </li>
-                <li data-ui-sref-active="active">
-                  <a href="" data-ui-sref="resume">Resume</a>
+                <li ui-sref-active="active">
+                  <a href="" ui-sref="projects">Projects</a>
                 </li>
-                <li data-ui-sref-active="active">
-                  <a href="" data-ui-sref="projects">Projects</a>
-                </li>
-                <li data-ui-sref-active="active">
-                  <a href="" data-ui-sref="code">Code</a>
+                <li ui-sref-active="active">
+                  <a href="" ui-sref="code">Code</a>
                 </li>
               </ul>
             </div>
@@ -64,7 +61,7 @@
       <div ui-view=""></div>
     </div>
 
-    <footer class="no-print" data-ng-controller="FooterController">
+    <footer class="no-print" ng-controller="FooterController">
       <div class="container">
         <span class="pull-left">
           <a href="http://github.com/waldenraines/waldenrainesdotcom"><i class="fa fa-github fa-3x"></i></a>
