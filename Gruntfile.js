@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                 tasks: ['newer:jshint:test', 'karma']
             },
             compass: {
-                files: ['<%= waldenrainesdotcom.src %>/styles/{,*/}*.{scss,sass}'],
+                files: ['<%= waldenrainesdotcom.src %>/styles/**/*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer:server']
             },
             gruntfile: {
@@ -122,14 +122,14 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     'Gruntfile.js',
-                    '<%= waldenrainesdotcom.src %>/app/{,*/}*.js'
+                    '<%= waldenrainesdotcom.src %>/app/**/*.js'
                 ]
             },
             test: {
                 options: {
                     jshintrc: 'test/.jshintrc'
                 },
-                src: ['test/unit/{,*/}*.js']
+                src: ['test/unit/**/*.js']
             }
         },
 
@@ -333,7 +333,7 @@ module.exports = function (grunt) {
                     usemin: 'scripts/scripts.js'
                 },
                 cwd: '<%= waldenrainesdotcom.src %>',
-                src: 'app/views/**/*.html',
+                src: 'app/**/*.html',
                 dest: '.tmp/templateCache.js'
             }
         },
