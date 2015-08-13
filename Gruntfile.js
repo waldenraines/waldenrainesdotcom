@@ -1,12 +1,6 @@
 // Generated on 2015-08-11 using generator-angular 0.12.1
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/unit/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/unit/**/*.js'
-
 module.exports = function (grunt) {
     var modRewrite = require('connect-modrewrite'),
         appConfig = {
@@ -37,14 +31,14 @@ module.exports = function (grunt) {
                 tasks: ['wiredep']
             },
             js: {
-                files: ['<%= waldenrainesdotcom.src %>/app/{,*/}*.js'],
+                files: ['<%= waldenrainesdotcom.src %>/app/**/*.js'],
                 tasks: ['newer:jshint:all'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
             },
             jsTest: {
-                files: ['test/unit/{,*/}*.js'],
+                files: ['test/unit/**/*.js'],
                 tasks: ['newer:jshint:test', 'karma']
             },
             compass: {
@@ -59,7 +53,7 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= waldenrainesdotcom.src %>/{,*/}*.html',
+                    '<%= waldenrainesdotcom.src %>/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '<%= waldenrainesdotcom.src %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
@@ -339,7 +333,7 @@ module.exports = function (grunt) {
                     usemin: 'scripts/scripts.js'
                 },
                 cwd: '<%= waldenrainesdotcom.src %>',
-                src: 'app/views/{,*/}*.html',
+                src: 'app/views/**/*.html',
                 dest: '.tmp/templateCache.js'
             }
         },

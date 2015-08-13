@@ -6,7 +6,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
+@import 'imports/components';
 @import 'imports/layout';
+@import 'imports/lists';
 @import 'imports/print';
-@import 'imports/resume';
-@import 'imports/under_construction';

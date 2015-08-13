@@ -2,8 +2,6 @@
  * @ngdoc overview
  * @name waldenrainesdotcom
  * @description
- * # waldenrainesdotcom
- *
  * Main module of the application.
  */
 angular.module('waldenrainesdotcom', [
@@ -15,6 +13,10 @@ angular.module('waldenrainesdotcom', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'waldenrainesdotcom.components',
+    'waldenrainesdotcom.code',
+    'ui.bootstrap.alert',
+    'ui.bootstrap.tpls',
     'ui.router'
 ]);
 
@@ -34,11 +36,6 @@ angular.module('waldenrainesdotcom').config(function ($stateProvider, $urlRouter
     $stateProvider.state('projects', {
         url: '/projects',
         templateUrl: 'app/views/projects.html'
-    });
-
-    $stateProvider.state('sandbox', {
-        url: '/sandbox',
-        templateUrl: 'app/views/sandbox.html'
     });
 
     $stateProvider.state('404', {
