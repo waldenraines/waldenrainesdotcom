@@ -1,0 +1,19 @@
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss";
+
+@media print {
+  * {
+    font-family: $font-family-serif;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .page-header {
+    margin-top: 0;
+  }
+
+  html a[href]:after {
+    content: "";
+  }
+}

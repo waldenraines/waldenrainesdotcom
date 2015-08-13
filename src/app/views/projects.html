@@ -1,0 +1,108 @@
+
+<div class="page-header">
+  <h1>
+    Current Projects
+  </h1>
+
+  <p>
+    Most of the projects I've worked on over the past few years can be seen at my <a href="http://github.com/waldenraines">Github Account</a> as everything I've been doing is open source.
+    What follows are some projects that aren't open source.
+  </p>
+</div>
+
+<section>
+  <h2>Subrosa</h2>
+  <p>
+    <a href="http://subrosagames.com">Subrosa</a> is an online system for hosting real-life games of <a href="http://en.wikipedia.org/wiki/Assassin_(game)">Assassins</a>.
+  </p>
+  <p>
+    Players visit the website to sign up and get assigned a kill code and a target.  Once the game begins, players hunt each other with Game Master defined "weapons" (in the case of <a href="http://raleighwars.com">Raleigh Wars</a> we used water "weapons").
+    A player eliminates another player with one of these weapons and obtains his or her kill code.  The successful Assassin records their elimination by entering the victim's kill code (online or via text) and they receive their next target.
+    The game goes on until only one player remains.
+  </p>
+  <p>
+    Subrosa also provides various assignment types (circular, bi-directional circular, and everyone for themselves), player statistics and accolades, the ability to restrict game entry based on a player's residence, and checkpoints that require a player
+    to be in a location at a certain time.  The goal is to provide everything you would need to run a successful game of Assassins.
+  </p>
+
+  <h4>Technology Used</h4>
+  <p>Keep in mind this web application is about five years old now and in the process of being replaced.</p>
+  <ul>
+    <li>
+      <a href="http://www.pylonsproject.org/">Pylons</a>: a Python MVC framework.
+    </li>
+    <li>
+      <a href="http://www.postgresql.org/">PostgresSQL</a> for the database layer.
+    </li>
+    <li>
+      <a href="https://www.rabbitmq.com/">RabbitMQ</a> and <a href="http://www.celeryproject.org/">Celery</a> as a distributed message queue for scheduling and executing game events.
+    </li>
+    <li>
+      <a href="https://developers.google.com/maps/?hl=en">Google Maps API</a> for map related functionality.
+    </li>
+    <li>
+      <a href="http://tropo.com">Tropo</a> as SMS API integration; we send and receive SMS messages that affect changes in the game.
+    </li>
+    <li>
+      <a href="https://developer.paypal.com/docs/classic/api/">PayPal API</a> (unfortunately the "classic" version, as this was created before the REST API was available) for payment processing.
+    </li>
+  </ul>
+
+  <h4>Lessons Learned</h4>
+  <ul>
+    <li>
+      <strong>Separate Concerns:</strong> Subrosa currently has the API and website bundled together and parts of the application that shouldn't depend on each other do.
+    </li>
+    <li>
+      <strong>Test Coverage:</strong> Subrosa has very little in the way of unit, integration, or other test coverage.  You have to write tests as you write code or they will never get written.
+    </li>
+    <li>
+      <strong>Icon Overload:</strong> Using images for icons can really slow down page load time when you have a lot of them.  Better to use font icons. If you have to use images, use <a href="http://css-tricks.com/css-sprites/">sprites</a>.
+    </li>
+    <li>
+      <strong>Use Semantic HTML:</strong> Subrosa currently is basically just a mess of divs.  Creating a div and styling it to display inline is bad.
+    </li>
+    <li>
+      <strong>Style.css is Bad:</strong> Having a multi-hundred line CSS file is great when a minifier spits it out but difficult to grok otherwise.
+    </li>
+    <li>
+      <strong>No More Spaghetti Javascript:</strong> Subrosa has bits of it all over the place.  Javscript should be written in reusable modules just like anything else.
+    </li>
+  </ul>
+
+  <h4>The Future</h4>
+  <p>
+    We are currently rewriting the API in Java.  We have just begun rewriting the web client as an <a href="http://angularjs.org">AngularJS</a> with other device native clients to come.
+  </p>
+
+  <h4>Screenshots</h4>
+  <a href="/images/dossier.png" rel="lightbox[player-screenshots]" title="Dossier View"><img src="/images/dossier_thumb.jpg" alt="Dossier View"></a>
+  <a href="/images/dossier-map.png" rel="lightbox[player-screenshots]" title="Map View"><img src="/images/dossier-map_thumb.jpg" alt="Map View"></a>
+  <a href="/images/accolades.png" rel="lightbox[player-screenshots]" title="Player Accolades"><img src="/images/accolades_thumb.jpg" alt="Player Accolades"></a>
+  <a href="/images/graph.png" rel="lightbox[player-screenshots]" title="Kill Graph"><img src="/images/graph_thumb.jpg" alt="Kill Graph"></a>
+</section>
+
+<section>
+  <h2>Zadats</h2>
+
+  <p>
+    <a href="http://zadats.com">Zadats</a> is a service that provides data sharing between law enforcement agencies.
+    I was part of this project in my spare time for a couple of weeks and completed a Link Analysis feature whereby related people, places, or property are shown in graphical form to help
+    law enforcement discern connections between them in order to solve crimes.
+  </p>
+
+  <h4>Technology Used</h4>
+  <ul>
+    <li>
+      <a href="http://angularjs.org">AngularJS</a> for keeping the javascript code sane and tested.
+    </li>
+    <li>
+      <a href="http://d3js.org/">D3.js</a> for creating a force-directed graph.
+    </li>
+  </ul>
+
+  <div class="screenshots">
+    <h4>Screenshot</h4>
+    <a href="" title="Zadats Link Analysis"><img src="/images/zadats_thumb.png" alt="Zadats Link Analysis"></a>
+  </div>
+</section>

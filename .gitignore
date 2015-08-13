@@ -1,0 +1,8 @@
+/.idea
+/node_modules
+/dist
+/.tmp
+/.divshot-cache
+/.sass-cache
+/.DS_STORE
+/bower_components
