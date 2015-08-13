@@ -11,3 +11,8 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'imports/lists';
 @import 'imports/print';
 @import 'imports/type';
+
+// Necessary bootstrap is loaded before angular and thus ng-cloak is not yet available.
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
