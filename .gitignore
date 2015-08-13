@@ -4,5 +4,5 @@
 /.tmp
 /.divshot-cache
 /.sass-cache
-/.DS_STORE
 /bower_components
+.DS_STORE
