@@ -16,6 +16,7 @@ angular.module('waldenrainesdotcom', [
     'waldenrainesdotcom.components',
     'waldenrainesdotcom.code',
     'ui.bootstrap.alert',
+    'ui.bootstrap.collapse',
     'ui.bootstrap.tpls',
     'ui.router'
 ]);
