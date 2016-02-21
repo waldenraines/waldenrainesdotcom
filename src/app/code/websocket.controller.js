@@ -18,7 +18,7 @@ angular.module('waldenrainesdotcom.code').controller('WebSocketController', func
     $scope.connectionError = false;
 
     $scope.connect = function () {
-        dataStream = $websocket('ws://websocket-walden.rhcloud.com:8000');
+        dataStream = $websocket('wss://websocket-walden.rhcloud.com:8000');
 
         dataStream.onMessage(function(message) {
             if (message && message.hasOwnProperty('data')) {
